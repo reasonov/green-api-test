@@ -16,6 +16,7 @@ export const apiBaseUrl =
 
 export const client = createClient<paths>({
   baseUrl: apiBaseUrl,
+  fetch: (request) => globalThis.fetch(request),
 })
 
 client.use({
